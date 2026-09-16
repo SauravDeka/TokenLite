@@ -1,0 +1,6 @@
+streamlit
+markitdown[pdf]
+tiktoken
+PyMuPDF
+python-docx
+python-pptx
