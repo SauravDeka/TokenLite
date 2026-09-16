@@ -11,8 +11,6 @@
 
 html,
 body {
-    margin: 0;
-    padding: 0;
     scrollbar-width: none;
 }
 
@@ -20,7 +18,6 @@ html::-webkit-scrollbar,
 body::-webkit-scrollbar {
     display: none;
     width: 0;
-    height: 0;
 }
 
 [data-testid="stAppViewContainer"] {
@@ -38,7 +35,6 @@ body::-webkit-scrollbar {
 [data-testid="stAppViewContainer"]::-webkit-scrollbar {
     display: none;
     width: 0;
-    height: 0;
 }
 
 [data-testid="stHeader"] {
@@ -51,8 +47,8 @@ body::-webkit-scrollbar {
 
 [data-testid="stMainBlockContainer"] {
     max-width: 1180px;
-    padding-top: 16px;
-    padding-bottom: 18px;
+    padding-top: 30px;
+    padding-bottom: 45px;
 }
 
 
@@ -60,7 +56,7 @@ body::-webkit-scrollbar {
 
 .site-header {
     width: 100%;
-    margin-bottom: 28px;
+    margin-bottom: 68px;
 }
 
 .brand {
@@ -72,6 +68,7 @@ body::-webkit-scrollbar {
 .brand-icon {
     width: 42px;
     height: 42px;
+
     border-radius: 12px;
 
     display: flex;
@@ -85,6 +82,7 @@ body::-webkit-scrollbar {
     );
 
     color: white;
+
     font-size: 20px;
 
     box-shadow:
@@ -99,13 +97,17 @@ body::-webkit-scrollbar {
 .brand-name {
     font-size: 20px;
     font-weight: 750;
+
     color: var(--text);
+
     line-height: 1.1;
 }
 
 .brand-tagline {
     margin-top: 3px;
+
     font-size: 12px;
+
     color: var(--muted);
 }
 
@@ -113,31 +115,38 @@ body::-webkit-scrollbar {
 /* Home page */
 
 .hero {
-    max-width: 920px;
-    margin: 0 auto 30px;
+    max-width: 780px;
+
+    margin: 0 auto 54px;
+
     text-align: center;
 }
 
 .eyebrow {
     color: var(--primary);
+
     font-size: 12px;
+
     font-weight: 800;
+
     letter-spacing: 0.16em;
 }
 
 .hero h1 {
-    margin: 10px 0 12px;
+    margin: 14px 0 18px;
 
     color: var(--text);
 
     font-size: clamp(
-        40px,
-        4vw,
-        58px
+        42px,
+        5vw,
+        68px
     );
 
-    line-height: 1.05;
+    line-height: 1.02;
+
     letter-spacing: -0.045em;
+
     font-weight: 800;
 }
 
@@ -148,41 +157,47 @@ body::-webkit-scrollbar {
 .hero p {
     margin: 0 auto;
 
-    max-width: 700px;
+    max-width: 650px;
 
     color: var(--muted);
 
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 17px;
+
+    line-height: 1.7;
 }
 
 .upload-section {
     text-align: center;
-    margin-bottom: 12px;
+
+    margin-bottom: 18px;
 }
 
 .upload-heading {
     color: var(--text);
-    font-size: 21px;
+
+    font-size: 22px;
+
     font-weight: 750;
 }
 
 .upload-description {
-    margin-top: 4px;
+    margin-top: 6px;
+
     color: var(--muted);
-    font-size: 13px;
+
+    font-size: 14px;
 }
 
 [data-testid="stFileUploader"] {
-    margin-top: 16px;
+    margin-top: 22px;
 }
 
 [data-testid="stFileUploaderDropzone"] {
-    min-height: 115px;
+    min-height: 190px;
 
     border: 1.5px dashed #b8c0d9;
 
-    border-radius: 20px;
+    border-radius: 22px;
 
     background: rgba(
         255,
@@ -213,14 +228,18 @@ body::-webkit-scrollbar {
 
 .file-card {
     display: flex;
+
     align-items: center;
+
     gap: 16px;
 
-    padding: 15px 18px;
-    margin-top: 14px;
+    padding: 18px 20px;
+
+    margin-top: 18px;
 
     border: 1px solid var(--border);
-    border-radius: 16px;
+
+    border-radius: 18px;
 
     background: var(--surface);
 
@@ -234,15 +253,17 @@ body::-webkit-scrollbar {
 }
 
 .file-type {
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
 
     flex-shrink: 0;
 
-    border-radius: 13px;
+    border-radius: 14px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     background: #eef0ff;
@@ -250,11 +271,13 @@ body::-webkit-scrollbar {
     color: var(--primary);
 
     font-size: 11px;
+
     font-weight: 800;
 }
 
 .file-details {
     min-width: 0;
+
     flex: 1;
 }
 
@@ -262,16 +285,21 @@ body::-webkit-scrollbar {
     color: var(--text);
 
     font-size: 15px;
+
     font-weight: 700;
 
     overflow: hidden;
+
     text-overflow: ellipsis;
+
     white-space: nowrap;
 }
 
 .file-meta {
-    margin-top: 4px;
+    margin-top: 5px;
+
     color: var(--muted);
+
     font-size: 12px;
 }
 
@@ -281,7 +309,7 @@ body::-webkit-scrollbar {
 
 .ready-badge,
 .complete-badge {
-    padding: 7px 12px;
+    padding: 8px 13px;
 
     border-radius: 999px;
 
@@ -290,6 +318,7 @@ body::-webkit-scrollbar {
     color: var(--success);
 
     font-size: 12px;
+
     font-weight: 750;
 }
 
@@ -297,9 +326,9 @@ body::-webkit-scrollbar {
 /* Buttons */
 
 .stButton > button {
-    min-height: 46px;
+    min-height: 50px;
 
-    border-radius: 12px;
+    border-radius: 13px;
 
     border: 1px solid var(--border);
 
@@ -315,7 +344,7 @@ body::-webkit-scrollbar {
 }
 
 .stButton > button[kind="primary"] {
-    margin-top: 14px;
+    margin-top: 18px;
 
     border: 0;
 
@@ -344,13 +373,13 @@ body::-webkit-scrollbar {
 
     justify-content: center;
 
-    gap: 28px;
+    gap: 32px;
 
-    margin-top: 20px;
+    margin-top: 42px;
 
     color: var(--muted);
 
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .feature {
@@ -363,6 +392,7 @@ body::-webkit-scrollbar {
 
 .feature span {
     color: var(--success);
+
     font-weight: 800;
 }
 
@@ -374,9 +404,9 @@ body::-webkit-scrollbar {
 
     justify-content: space-between;
 
-    margin-top: 28px;
+    margin-top: 70px;
 
-    padding-top: 16px;
+    padding-top: 22px;
 
     border-top: 1px solid var(--border);
 
@@ -390,7 +420,8 @@ body::-webkit-scrollbar {
 
 .result-title {
     text-align: center;
-    padding: 5px 0 24px;
+
+    padding: 5px 0 30px;
 }
 
 .result-title h1 {
@@ -480,6 +511,7 @@ body::-webkit-scrollbar {
 
 .result-file-details {
     min-width: 0;
+
     flex: 1;
 }
 
@@ -624,22 +656,43 @@ body::-webkit-scrollbar {
     font-weight: 700;
 }
 
-.stDownloadButton {
+[data-testid="stDownloadButton"] {
     margin-top: 10px;
 }
 
-.stDownloadButton > button {
-    min-height: 48px;
-
-    border-radius: 13px;
-
-    border: 1px solid var(--border);
-
-    font-weight: 650;
+[data-testid="stDownloadButton"] button,
+.stDownloadButton button {
+    min-height: 48px !important;
+    border-radius: 13px !important;
+    border: 0 !important;
+    background: #5865f2 !important;
+    background-color: #5865f2 !important;
+    background-image: none !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    font-weight: 650 !important;
+    box-shadow: 0 8px 20px rgba(88, 101, 242, 0.18) !important;
 }
 
-.stDownloadButton > button:hover {
-    border-color: var(--primary);
+[data-testid="stDownloadButton"] button:hover,
+.stDownloadButton button:hover {
+    border: 0 !important;
+    background: #4f46e5 !important;
+    background-color: #4f46e5 !important;
+    background-image: none !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    transform: translateY(-1px);
+}
+
+[data-testid="stDownloadButton"] button:focus,
+[data-testid="stDownloadButton"] button:active,
+.stDownloadButton button:focus,
+.stDownloadButton button:active {
+    background: #4f46e5 !important;
+    background-color: #4f46e5 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
 }
 
 
@@ -713,6 +766,7 @@ body::-webkit-scrollbar {
 
 [data-testid="stTabs"] button {
     font-size: 13px;
+
     font-weight: 650;
 }
 
@@ -847,53 +901,6 @@ body::-webkit-scrollbar {
 }
 
 
-/* Compact result classes */
-
-.compact-result-title {
-    padding-bottom: 18px;
-}
-
-.compact-file-card {
-    margin-bottom: 18px;
-}
-
-.compact-section-label {
-    margin-top: 12px;
-    margin-bottom: 5px;
-}
-
-.compact-intro {
-    margin-bottom: 10px;
-}
-
-.compact-output-card {
-    min-height: 145px;
-    padding: 18px;
-}
-
-.compact-output-card .download-description {
-    margin-top: 6px;
-    line-height: 1.4;
-}
-
-.compact-output-card .output-token-info {
-    margin-top: 8px;
-}
-
-.compact-success {
-    margin-top: 16px;
-    padding: 12px 16px;
-}
-
-.compact-preview-label {
-    margin-top: 22px;
-}
-
-.compact-footer {
-    margin-top: 28px;
-}
-
-
 /* Mobile */
 
 @media (max-width: 760px) {
@@ -901,16 +908,10 @@ body::-webkit-scrollbar {
     [data-testid="stMainBlockContainer"] {
         padding-left: 20px;
         padding-right: 20px;
-        padding-top: 14px;
-        padding-bottom: 20px;
     }
 
     .site-header {
-        margin-bottom: 28px;
-    }
-
-    .hero {
-        margin-bottom: 28px;
+        margin-bottom: 42px;
     }
 
     .hero h1,
@@ -918,22 +919,12 @@ body::-webkit-scrollbar {
         font-size: 42px;
     }
 
-    .hero p {
-        font-size: 15px;
-    }
-
-    [data-testid="stFileUploaderDropzone"] {
-        min-height: 120px;
-    }
-
     .feature-row {
         flex-direction: column;
 
         align-items: center;
 
-        gap: 10px;
-
-        margin-top: 18px;
+        gap: 12px;
     }
 
     .file-card,
@@ -962,342 +953,106 @@ body::-webkit-scrollbar {
         flex-direction: column;
 
         gap: 8px;
-
-        margin-top: 28px;
     }
 }
 
-/* Change document action */
-
-.st-key-change_document {
-    display: flex;
-    justify-content: flex-end;
+/* Streamlit native UI text consistency */
+[data-testid="stFileUploaderDropzone"] {
+    color: var(--text) !important;
 }
 
-.st-key-change_document button {
-    min-height: 40px;
-    padding: 0 18px;
-
-    border-radius: 11px;
-
-    background: transparent;
-    border: 1px solid var(--border);
-
-    color: var(--muted);
-
-    font-size: 12px;
-    font-weight: 650;
+[data-testid="stFileUploaderDropzone"] section,
+[data-testid="stFileUploaderDropzone"] section > div {
+    color: var(--text) !important;
 }
 
-.st-key-change_document button:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-    background: #f8f8ff;
+[data-testid="stFileUploaderDropzone"] section small {
+    color: var(--muted) !important;
+    opacity: 1 !important;
 }
 
-
-/* Keep optimize as the primary action */
-
-.st-key-optimize_button {
-    margin-top: 4px;
+[data-testid="stFileUploaderDropzone"] section button {
+    color: var(--text) !important;
+    background: #ffffff !important;
+    border: 1px solid #d0d5dd !important;
 }
 
-.st-key-optimize_button button {
-    min-height: 52px;
+[data-testid="stFileUploaderDropzone"] section button:hover {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
 }
 
-/* Cleanup information */
-
-.cleaned-section {
-    margin-top: 12px;
-    padding-top: 10px;
-    border-top: 1px solid #eaecf0;
+[data-testid="stExpander"] {
+    color: var(--text) !important;
 }
 
-.cleaned-label {
-    color: var(--text);
-    font-size: 11px;
-    font-weight: 750;
-    margin-bottom: 4px;
+[data-testid="stExpander"] summary {
+    color: var(--text) !important;
 }
 
-.cleaned-items {
-    color: var(--muted);
-    font-size: 11px;
-    line-height: 1.5;
+[data-testid="stExpander"] summary p,
+[data-testid="stExpander"] summary span {
+    color: var(--text) !important;
+    opacity: 1 !important;
+}
+
+[data-testid="stExpander"] summary:hover,
+[data-testid="stExpander"] summary:hover p,
+[data-testid="stExpander"] summary:hover span {
+    color: var(--primary) !important;
 }
 
 
-/* Cleanup details */
-
-.cleanup-details {
-    margin-bottom: 10px;
-}
-
-.cleanup-details-title {
-    color: var(--text);
-    font-size: 13px;
-    font-weight: 700;
-}
-
-
-/* Warning state */
-
-.warning-message {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-
-    margin-top: 16px;
-    padding: 12px 16px;
-
-    border: 1px solid #f1dfb5;
-    border-radius: 15px;
-
-    background: #fffbeb;
-    color: #8a5a00;
-}
-
-.warning-icon {
-    width: 30px;
-    height: 30px;
-
-    flex-shrink: 0;
-
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #fef3c7;
-
-    font-weight: 800;
-}
-
-.warning-message strong {
-    display: block;
-    font-size: 14px;
-}
-
-.warning-message span {
-    display: block;
-    margin-top: 2px;
-    font-size: 13px;
-    line-height: 1.4;
-}
-
-
-/* Output icons */
-
-.download-icon {
-    font-size: 20px;
-}
-
-/* Output card alignment */
-
-.converted-card,
-.optimized-card {
-    height: 210px;
-    min-height: 210px;
-    box-sizing: border-box;
-}
-
-
-/* Download buttons */
-
-.stDownloadButton {
-    margin-top: 10px;
-}
-
+/* Download buttons: clean white style */
 .stDownloadButton > button {
-    min-height: 50px;
-
-    border-radius: 13px;
-
-    font-size: 14px;
-    font-weight: 650;
-
-    transition:
-        transform 0.15s ease,
-        box-shadow 0.15s ease,
-        border-color 0.15s ease;
+    min-height: 48px !important;
+    border-radius: 13px !important;
+    border: 1px solid var(--border) !important;
+    background: #ffffff !important;
+    color: var(--text) !important;
+    font-weight: 650 !important;
+    box-shadow: none !important;
 }
 
-
-/* Converted download */
-
-.st-key-download_converted > div > button {
-    color: white !important;
-
-    border: 0 !important;
-
-    background: linear-gradient(
-        135deg,
-        #5865f2,
-        #6366f1
-    ) !important;
-
-    box-shadow:
-        0 8px 22px rgba(
-            88,
-            101,
-            242,
-            0.20
-        );
+.stDownloadButton > button:hover {
+    background: #ffffff !important;
+    color: var(--text) !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 6px 18px rgba(88, 101, 242, 0.08) !important;
 }
 
-
-/* Optimized download */
-
-.st-key-download_optimized > div > button {
-    color: white !important;
-
-    border: 0 !important;
-
-    background: linear-gradient(
-        135deg,
-        #7048e8,
-        #5865f2
-    ) !important;
-
-    box-shadow:
-        0 8px 22px rgba(
-            112,
-            72,
-            232,
-            0.22
-        );
+.stDownloadButton > button p,
+.stDownloadButton > button span {
+    color: var(--text) !important;
 }
 
+.stDownloadButton > button:hover p,
+.stDownloadButton > button:hover span {
+    color: var(--text) !important;
+}
 
-/* Download hover */
+/* Final download button override */
+[data-testid="stDownloadButton"] button,
+[data-testid="stDownloadButton"] button:hover,
+[data-testid="stDownloadButton"] button:focus,
+[data-testid="stDownloadButton"] button:active {
+    background: #5865f2 !important;
+    background-color: #5865f2 !important;
+    background-image: none !important;
+    border: 1px solid #5865f2 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    box-shadow: 0 8px 20px rgba(88, 101, 242, 0.18) !important;
+}
 
-.st-key-download_converted > div > button:hover,
-.st-key-download_optimized > div > button:hover {
+[data-testid="stDownloadButton"] button * {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+[data-testid="stDownloadButton"] button:hover {
+    background: #4f46e5 !important;
+    background-color: #4f46e5 !important;
+    border-color: #4f46e5 !important;
     transform: translateY(-1px);
-
-    color: white !important;
-
-    box-shadow:
-        0 12px 28px rgba(
-            88,
-            101,
-            242,
-            0.28
-        );
-}
-
-
-/* Cleanup information */
-
-.cleaned-section {
-    margin-top: 12px;
-    padding-top: 10px;
-
-    border-top: 1px solid #eaecf0;
-}
-
-.cleaned-label {
-    color: var(--text);
-
-    font-size: 11px;
-    font-weight: 750;
-
-    margin-bottom: 4px;
-}
-
-.cleaned-items {
-    color: var(--muted);
-
-    font-size: 11px;
-    line-height: 1.5;
-}
-
-
-/* Cleanup details */
-
-.cleanup-details {
-    margin-bottom: 10px;
-}
-
-.cleanup-details-title {
-    color: var(--text);
-
-    font-size: 13px;
-    font-weight: 700;
-}
-
-
-/* Warning state */
-
-.warning-message {
-    display: flex;
-
-    align-items: center;
-
-    gap: 13px;
-
-    margin-top: 16px;
-
-    padding: 12px 16px;
-
-    border: 1px solid #f1dfb5;
-
-    border-radius: 15px;
-
-    background: #fffbeb;
-
-    color: #8a5a00;
-}
-
-.warning-icon {
-    width: 30px;
-    height: 30px;
-
-    flex-shrink: 0;
-
-    border-radius: 50%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background: #fef3c7;
-
-    font-weight: 800;
-}
-
-.warning-message strong {
-    display: block;
-
-    font-size: 14px;
-}
-
-.warning-message span {
-    display: block;
-
-    margin-top: 2px;
-
-    font-size: 13px;
-
-    line-height: 1.4;
-}
-
-
-/* Mobile */
-
-@media (max-width: 760px) {
-
-    .converted-card,
-    .optimized-card {
-        height: auto;
-        min-height: 190px;
-    }
-
-    .stDownloadButton > button {
-        min-height: 48px;
-    }
 }
