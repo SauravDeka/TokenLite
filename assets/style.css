@@ -115,7 +115,7 @@ body::-webkit-scrollbar {
 /* Home page */
 
 .hero {
-    max-width: 780px;
+    max-width: 1100px;
 
     margin: 0 auto 54px;
 
@@ -135,6 +135,8 @@ body::-webkit-scrollbar {
 .hero h1 {
     margin: 14px 0 18px;
 
+    white-space: nowrap;
+
     color: var(--text);
 
     font-size: clamp(
@@ -152,6 +154,7 @@ body::-webkit-scrollbar {
 
 .hero h1 span {
     color: var(--primary);
+    white-space: nowrap;
 }
 
 .hero p {
@@ -956,103 +959,136 @@ body::-webkit-scrollbar {
     }
 }
 
-/* Streamlit native UI text consistency */
+/* Streamlit native UI text fixes — scoped only to affected controls */
+
+/* File uploader: keep the existing dropzone design, only fix readability */
 [data-testid="stFileUploaderDropzone"] {
     color: var(--text) !important;
+    font-size: 14px !important;
 }
 
-[data-testid="stFileUploaderDropzone"] section,
+[data-testid="stFileUploaderDropzone"] section {
+    color: var(--text) !important;
+    font-size: 14px !important;
+}
+
 [data-testid="stFileUploaderDropzone"] section > div {
     color: var(--text) !important;
+    font-size: 14px !important;
 }
 
 [data-testid="stFileUploaderDropzone"] section small {
     color: var(--muted) !important;
+    font-size: 12px !important;
     opacity: 1 !important;
 }
 
-[data-testid="stFileUploaderDropzone"] section button {
-    color: var(--text) !important;
-    background: #ffffff !important;
+[data-testid="stFileUploaderDropzone"] section button,
+[data-testid="stFileUploaderDropzone"] button[kind="secondary"] {
+    min-height: 42px !important;
+    padding: 8px 16px !important;
+    border-radius: 10px !important;
     border: 1px solid #d0d5dd !important;
+    background: #ffffff !important;
+    color: var(--text) !important;
+    -webkit-text-fill-color: var(--text) !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
 }
 
-[data-testid="stFileUploaderDropzone"] section button:hover {
+[data-testid="stFileUploaderDropzone"] section button:hover,
+[data-testid="stFileUploaderDropzone"] button[kind="secondary"]:hover {
+    background: #ffffff !important;
     color: var(--primary) !important;
+    -webkit-text-fill-color: var(--primary) !important;
     border-color: var(--primary) !important;
 }
 
+/* Expander: keep its shape, fix only the title/readability */
 [data-testid="stExpander"] {
     color: var(--text) !important;
 }
 
-[data-testid="stExpander"] summary {
-    color: var(--text) !important;
+[data-testid="stExpander"] details {
+    background: #ffffff !important;
 }
 
+[data-testid="stExpander"] summary {
+    min-height: 48px !important;
+    color: var(--text) !important;
+    background: #ffffff !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+
+[data-testid="stExpander"] summary > div,
 [data-testid="stExpander"] summary p,
 [data-testid="stExpander"] summary span {
     color: var(--text) !important;
+    -webkit-text-fill-color: var(--text) !important;
+    font-size: 14px !important;
     opacity: 1 !important;
 }
 
 [data-testid="stExpander"] summary:hover,
+[data-testid="stExpander"] summary:hover > div,
 [data-testid="stExpander"] summary:hover p,
 [data-testid="stExpander"] summary:hover span {
     color: var(--primary) !important;
+    -webkit-text-fill-color: var(--primary) !important;
 }
 
+/* Output tabs: keep the existing tab design, only restore readable text */
+[data-testid="stTabs"] button {
+    color: var(--muted) !important;
+    -webkit-text-fill-color: var(--muted) !important;
+    font-size: 13px !important;
+    font-weight: 650 !important;
+}
 
-/* Download buttons: clean white style */
-.stDownloadButton > button {
+[data-testid="stTabs"] button[aria-selected="true"] {
+    color: var(--primary) !important;
+    -webkit-text-fill-color: var(--primary) !important;
+}
+
+[data-testid="stTabs"] button p,
+[data-testid="stTabs"] button span {
+    color: inherit !important;
+    -webkit-text-fill-color: inherit !important;
+    font-size: inherit !important;
+}
+
+[data-testid="stTabs"] button[aria-selected="true"] p,
+[data-testid="stTabs"] button[aria-selected="true"] span {
+    color: var(--primary) !important;
+    -webkit-text-fill-color: var(--primary) !important;
+}
+
+/* Download buttons: preserve the final working purple design */
+[data-testid="stDownloadButton"] button {
     min-height: 48px !important;
     border-radius: 13px !important;
-    border: 1px solid var(--border) !important;
-    background: #ffffff !important;
-    color: var(--text) !important;
-    font-weight: 650 !important;
-    box-shadow: none !important;
-}
-
-.stDownloadButton > button:hover {
-    background: #ffffff !important;
-    color: var(--text) !important;
-    border-color: var(--primary) !important;
-    box-shadow: 0 6px 18px rgba(88, 101, 242, 0.08) !important;
-}
-
-.stDownloadButton > button p,
-.stDownloadButton > button span {
-    color: var(--text) !important;
-}
-
-.stDownloadButton > button:hover p,
-.stDownloadButton > button:hover span {
-    color: var(--text) !important;
-}
-
-/* Final download button override */
-[data-testid="stDownloadButton"] button,
-[data-testid="stDownloadButton"] button:hover,
-[data-testid="stDownloadButton"] button:focus,
-[data-testid="stDownloadButton"] button:active {
+    border: 1px solid #5865f2 !important;
     background: #5865f2 !important;
     background-color: #5865f2 !important;
     background-image: none !important;
-    border: 1px solid #5865f2 !important;
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
+    font-weight: 650 !important;
     box-shadow: 0 8px 20px rgba(88, 101, 242, 0.18) !important;
-}
-
-[data-testid="stDownloadButton"] button * {
-    color: #ffffff !important;
-    -webkit-text-fill-color: #ffffff !important;
 }
 
 [data-testid="stDownloadButton"] button:hover {
     background: #4f46e5 !important;
     background-color: #4f46e5 !important;
     border-color: #4f46e5 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
     transform: translateY(-1px);
+}
+
+[data-testid="stDownloadButton"] button * {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
 }
